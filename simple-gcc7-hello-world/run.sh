@@ -1,1 +1,5 @@
-docker run gcchelloworld
+
+# docker run gcchelloworld
+
+# startup with console
+docker run -it gcchelloworld
