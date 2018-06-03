@@ -1,0 +1,11 @@
+FROM alpine
+
+# install iperf, from
+# https://github.com/gliderlabs/docker-alpine/blob/master/docs/usage.md
+RUN apk add --update iperf
+	
+WORKDIR /app
+
+# run iperf in server mode
+CMD ["/usr/bin/iperf", "-s"]
+

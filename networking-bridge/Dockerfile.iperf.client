@@ -1,0 +1,14 @@
+FROM alpine
+
+# install iperf, from
+# https://github.com/gliderlabs/docker-alpine/blob/master/docs/usage.md
+RUN apk add --update iperf
+	
+WORKDIR /app
+
+# debug the connection to the host 'iperfserver'
+#CMD ["/bin/ping","-c2","iperfserver"]
+
+# connect the client to the iperf-server
+CMD ["/usr/bin/iperf","-c","iperfserver"]
+
